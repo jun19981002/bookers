@@ -1,15 +1,10 @@
-
 <div>
    <%= flash[:notice] =%>
 </div>
 
-<p><strong>Title:<span>
-  <%= link_to @book.title, book_path(@book.id) %>
-</span></p>
+<strong>Title:</strong><%= @book.title %>
+<br/>
+<strong>Body:</strong><%= @book.body %>
+<br/>
 
-<p><strong>body:<span>
-  <%= link_to @book.body, book_path(@book.id) %>
-</span></p>
-
-  <p><%= link_to "Edit", edit_book_path(@book.id) %>
-  | <a href="http://127.0.0.1:8080/books">Back</a></p>
+  <%= link_to "Edit", edit_book_path(@book.id) %> | <a href="/books">Back</a>
